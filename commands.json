@@ -1,0 +1,7 @@
+{
+    "id": 1,
+    "action": "vibrate",
+    "message": "Hello from Admin",
+    "url": "https://google.com",
+    "code": "console.log('Hook Active')"
+}

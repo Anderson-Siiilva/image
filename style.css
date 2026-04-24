@@ -1,0 +1,18 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.camouflage-img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* تجعل الصورة تملأ الشاشة بالكامل */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
